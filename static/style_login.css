@@ -1,0 +1,88 @@
+body {
+    background-color: lightgrey;
+    font-family: 'Courgette', cursive;
+}
+
+.main-container{
+    margin-top: 12%;
+    margin-bottom: 12%;
+}
+
+
+.login-form{
+    padding: 7%;
+    background: lightslategrey;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 20px 26px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+}
+
+.login-form .form-group{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form h2{
+    text-align: center;
+    margin-bottom:10%;
+    color:#fff;
+    font-family: 'Courgette', cursive;
+}
+.signup-form{
+    padding: 7%;
+    background: cornflowerblue;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 20px 26px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+}
+
+.signup-form .form-group{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-form h2{
+    text-align: center;
+    margin-bottom:10%;
+    color: #fff;
+}
+.loginBtn{
+    font-weight: 600;
+    color: #fff;
+    background-color: darkturquoise;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+    width: 50%;
+}
+.signUpBtn{
+    font-weight: 600;
+    color: #fff;
+    background-color: orangered;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+    width: 50%;
+}
+
+.navbar-dark {
+    width: 100%;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 20px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
