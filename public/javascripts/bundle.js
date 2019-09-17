@@ -128,7 +128,19 @@ eval("var content = __webpack_require__(/*! !../../node_modules/mini-css-extract
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _validation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./validation */ \"./src/js/validation.js\");\n\n\nObject(_validation__WEBPACK_IMPORTED_MODULE_1__[\"validateLogin\"])();\nObject(_validation__WEBPACK_IMPORTED_MODULE_1__[\"validateSignUp\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/validation.js":
+/*!******************************!*\
+  !*** ./src/js/validation.js ***!
+  \******************************/
+/*! exports provided: validateLogin, validateSignUp */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateLogin\", function() { return validateLogin; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"validateSignUp\", function() { return validateSignUp; });\nconst validateLogin = function () {\n  const form = document.getElementById('login-form');\n  form.addEventListener('submit', function (e) {\n    const username = document.getElementById('login-username');\n    const password = document.getElementById('login-password');\n\n    if (username.value.length < 3 || password.value.length > 15 || /\\s/.test(username.value)) {\n      e.preventDefault();\n      alert('Login musi posiadać od 3 do 15 znaków i nie może zawierać spacji');\n    }\n\n    if (password.value.length < 5 || password.value.length > 20) {\n      e.preventDefault();\n      alert('Hasło musi posiadać od 5 do 20 znaków');\n    }\n\n    console.log('dziala');\n  });\n};\n\nconst validateSignUp = function () {\n  const form = document.getElementById('signup-form');\n  form.addEventListener('submit', function (e) {\n    const username = document.getElementById('signup-username');\n    const password = document.getElementById('signup-password');\n\n    if (username.value.length < 3 || password.value.length > 15 || /\\s/.test(username.value)) {\n      e.preventDefault();\n      alert('Login musi posiadać od 3 do 15 znaków i nie może zawierać spacji');\n    }\n\n    if (password.value.length < 5 || password.value.length > 20) {\n      e.preventDefault();\n      alert('Hasło musi posiadać od 5 do 20 znaków');\n    }\n\n    console.log('dziala');\n  });\n};\n\n\n\n//# sourceURL=webpack:///./src/js/validation.js?");
 
 /***/ })
 

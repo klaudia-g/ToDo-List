@@ -18,35 +18,36 @@
 </nav>
 <div class="container main-container">
     <div class="row">
-        <div class="col-md-6 login-form">
+        <form class="col-md-6 login-form" id="login-form">
             <h2>Login</h2>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" value=""/>
+                <input required type="text" id="login-username" class="form-control" placeholder="Username" value=""/>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" value=""/>
+                <input required type="password" id="login-password" class="form-control" placeholder="Password" value=""/>
             </div>
             <div class="form-group">
                 <input type="submit" class="loginBtn" value="Login"/>
             </div>
-        </div>
-        <div class="col-md-6 signup-form bg-light">
+        </form>
+        <form class="col-md-6 signup-form bg-light" id="signup-form">
             <h2>Sign Up</h2>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" value=""/>
+                <input required type="text" id="signup-username"  class="form-control" placeholder="Username" value=""/>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name" value=""/>
+                <input required type="text" class="form-control" placeholder="Name" value=""/>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" value=""/>
+                <input required type="password" id="signup-password" class="form-control" placeholder="Password" value=""/>
             </div>
             <div class="form-group">
                 <input type="submit" class="signUpBtn bg-info" value="Sign up"/>
             </div>
-        </div>
+        </form>
 
     </div>
 </div>
+<script src="../public/javascripts/bundle.js"></script>
 </body>
 </html>
