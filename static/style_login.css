@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    background-image: url("qbkls.png");
     font-family: 'Courgette', cursive;
 }
 
@@ -52,7 +52,7 @@ body {
 .signup-form h2{
     text-align: center;
     margin-bottom:10%;
-    color: #fff;
+    color: black;
 }
 .loginBtn{
     font-weight: 600;
@@ -82,7 +82,7 @@ body {
 }
 
 .nav-title {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 1.5rem;
 }
