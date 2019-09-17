@@ -14,7 +14,6 @@ const validateLogin = function() {
             e.preventDefault();
             alert('Hasło musi posiadać od 5 do 20 znaków');
         } 
-        console.log('dziala');
     });
 }
 
@@ -35,7 +34,6 @@ const validateSignUp = function() {
             e.preventDefault();
             alert('Hasło musi posiadać od 5 do 20 znaków');
         } 
-        console.log('dziala');
     });
 }
 
