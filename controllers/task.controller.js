@@ -9,7 +9,8 @@ exports.create = (req, res) => {
 
     const task = new Task({
         isChecked: req.body.isChecked || false,
-        content: req.body.content
+        content: req.body.content,
+        userId: req.body.userId
     });
 
     task.save()
@@ -23,7 +24,7 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-    Task.find()
+    Task.find( { userId: req.params.userId } )
         .then(tasks => {
             res.send(tasks);
         }).catch(err => {
@@ -42,7 +43,8 @@ exports.update = (req, res) => {
 
     Task.findByIdAndUpdate(req.params.taskId, {
             content: req.body.content,
-            isChecked: req.body.isChecked
+            isChecked: req.body.isChecked,
+            userId : req.body.userId
         }, {
             new: true
         })
@@ -66,12 +68,15 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Task.findByIdAndRemove(req.params.taskId)
-    .then(task => {
-        if(!task) {
+    Task.find({ userId: req.params.userId, _id: req.params.taskId } )
+    .then(tasks => {
+        if(!tasks) {
             return res.status(404).send({
                 message: "Task not found with id " + req.params.taskId
             });
+        }
+        if(tasks.length>0){
+            tasks[0].remove();
         }
         res.send({message: "Task deleted successfully!"});
     }).catch(err => {

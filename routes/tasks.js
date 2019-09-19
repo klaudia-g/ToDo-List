@@ -6,11 +6,11 @@ var router = express.Router();
 
     router.post('/', tasks.create);
 
-    router.get('/', tasks.findAll);
+    router.get('/:userId', tasks.findAll);
 
     router.put('/:taskId', tasks.update);
 
-    router.delete('/:taskId', tasks.delete);
+    router.delete('/:userId/:taskId', tasks.delete);
 //}
 
 module.exports = router;
