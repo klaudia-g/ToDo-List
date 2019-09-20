@@ -1,9 +1,4 @@
-// import { DH_NOT_SUITABLE_GENERATOR } from "constants";
-
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
-
+import {getTasks, createTask, deleteTask} from "../routes/index";
 const trash = document.querySelectorAll('.fa-trash-alt');
 const edit = document.querySelectorAll('.fa-edit')
 console.log(trash);
