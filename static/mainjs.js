@@ -1,4 +1,4 @@
-import {getTasks, createTask, deleteTask} from "../routes/index";
+// import {getTasks, createTask, deleteTask} from "../routes/index";
 const trash = document.querySelectorAll('.fa-trash-alt');
 const edit = document.querySelectorAll('.fa-edit')
 console.log(trash);
