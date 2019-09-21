@@ -1,8 +1,13 @@
-// import {getTasks, createTask, deleteTask} from "../routes/index";
+  
+
+
+import { getTasks, createTask, deleteTask, updateTask, getList } from "../routes/index";
+
 const trash = document.querySelectorAll('.fa-trash-alt');
 const edit = document.querySelectorAll('.fa-edit')
 console.log(trash);
 const addition = document.getElementById('additionButton');
+
 
 addition.addEventListener('click', addElement);
 
@@ -14,19 +19,24 @@ edit.forEach(function(elem) {
     elem.addEventListener("click", editElement)
 });
 
-
-
 let taskContainer = document.getElementById('taskContainer');
 let taskUl = document.getElementById('taskUl');
+
+//GET --------------------
+getList();
+
+//EDIT --------------------
 
 function editElement (e) {
     console.log(e)
    let parent =  e.target.parentElement.parentElement;
    console.log(parent)
-
+   let lab = parent.div;
+   
+//    let value = parent.div.value;
+   
    parent.innerHTML = "";
    parent.className = "list-group-item edit-item";
-//    input.contentEditable = 'true';
    
     let div = document.createElement('div');
     let label = document.createElement('label');
@@ -41,34 +51,41 @@ function editElement (e) {
     button.className = "btn btn-outline-info btn-save";
     button.type = "save";
     button.innerText = "Save";
-
+    input.value = 
 
     div.appendChild(label);
     div.appendChild(input);
     div.appendChild(button);
     parent.appendChild(div);
     
-    let buttonSave = parent.div.button;
-    
+    // let buttonSave = parent.div.button;
 }
 
+// REMOVE ---------
 function removeElement(e) {
+    fetch('/:userId/:taskId')
+    .then((res) => tasks.delete(res))
    let parent = e.target.parentElement.parentElement;
    console.log(parent)
    taskUl.removeChild(parent);
-   
 //    taskContainer.removeChild(parent);
+deleteTask();
 };
 
+//ADD --------------------
 function addElement (e) {
+
 e.preventDefault();
+let addInput = document.getElementById('inputForm').value;
+
+
 let li = document.createElement('li');
 let trashIcon = document.createElement('i');
 let editIcon = document.createElement('i');
 let div = document.createElement('div');
 let label = document.createElement('label');
 let input = document.createElement('input');
-let addInput = document.getElementById('inputForm').value;
+
 let span = document.createElement('span');
 
 li.className = "list-group-item";
@@ -91,5 +108,6 @@ label.appendChild(span);
 li.appendChild(div);
 taskContainer.appendChild(li);
 trashIcon.addEventListener('click', removeElement);
+createTask()
 };
 

@@ -42,10 +42,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-<<<<<<< HEAD
 
-module.exports = app;
-=======
 const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
 
@@ -65,4 +62,3 @@ app.listen(3000, function() {
 })
 
 module.exports = app;
->>>>>>> origin/master
