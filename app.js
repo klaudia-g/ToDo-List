@@ -11,6 +11,7 @@ var logger = require('morgan');
 
 const auth = require('./routes/auth');
 const users = require('./routes/users');
+const logout = require('./routes/logout');
 var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 var tasksRouter = require('./routes/tasks');
@@ -38,6 +39,7 @@ app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
 app.use('/users', users);
 app.use('/auth', auth);
+app.use('/logout', logout);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
