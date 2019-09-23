@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include head %>
+
+<body>
+    <nav class="navbar navbar-dark bg-light">
+        <div class="nav-title">
+            To-Do List
+        </div>
+
+    </nav>
+    <div class="container main-container">
+        <div class="row">
+            <form class="col-md-6 login-form" id="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <input required type="text" id="login-username" class="form-control" placeholder="Username"
+                        value="" />
+                </div>
+                <div class="form-group">
+                    <input required type="password" id="login-password" class="form-control" placeholder="Password"
+                        value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="loginBtn" value="Login" />
+                </div>
+            </form>
+            <form class="col-md-6 signup-form bg-light" id="signup-form">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <input required type="text" id="signup-username" class="form-control" placeholder="Username"
+                        value="" />
+                </div>
+                <div class="form-group">
+                    <input required type="text" id='signup-name' class="form-control" placeholder="Name" value="" />
+                </div>
+                <div class="form-group">
+                    <input required type="password" id="signup-password" class="form-control" placeholder="Password"
+                        value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="signUpBtn bg-info" value="Sign up" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="javascripts/bundle.js"></script>
+</body>
+
+</html>

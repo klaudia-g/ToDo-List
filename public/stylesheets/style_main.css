@@ -1,0 +1,73 @@
+body {
+    background-image: url("../images/qbkls.png");
+    font-family: 'Courgette', cursive;
+}
+
+.container {
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.btn-add {
+    margin-left: 2%;
+}
+
+.new-thing-container {
+    padding: 20px 15px;
+    margin: 5% auto 5% auto;
+    border-radius: 0.15rem;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 20px 26px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-save {
+    margin-left: 2%;
+    padding: 0px 12px;
+}
+
+.item {
+    display: flex
+}
+
+.things-container {
+    padding: 0;
+    margin: 7% auto 5% auto;
+}
+
+.list-group-item {
+    font-size: 1.2rem;
+    padding: 20px 15px 20px 50px;
+}
+
+.edit-item {
+    padding: 20px 15px 20px 15px;
+    font-size: 1.5rem;
+}
+
+.form-check-input {
+    margin-left: -30px;
+}
+
+.edit {
+    margin: 0px 10px;
+}
+
+.fonts {
+    float: right;
+}
+
+.far {
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+
+.fas {
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+
+.lo-btn {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}

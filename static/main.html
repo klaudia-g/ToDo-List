@@ -9,56 +9,35 @@
     <script src="https://kit.fontawesome.com/ef8a53743e.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="style_main.css">
+
 </head>
 <body>
     <header class="lo-btn">
-        <button class="btn btn-outline-info" type="logout">Logout</button>
+        <button class="btn btn-outline-info" type="logout" id="logout">Logout</button>
     </header>
     <div class="main-container container-fluid ">
         <div class="container-fluid">
-            <div class="col-md-6 new-thing-container bg-light">
+            <form class="col-md-6 new-thing-container bg-light" id="form">
                 <h3>New Thing:</h3>
                 <div class="container">
-                    <input type="text" class="form-control new-thing">
-                    <button class="btn btn-info btn-add" type="add">Add</button>
+                    <input type="text" class="form-control new-thing" id="inputForm" value="">
+                    <input class="btn btn-info btn-add" type="submit" id="additionButton" value="Add"></input>
                 </div>  
-            </div>
-            <div class="col-md-6 things-container bg-light">
-                <ul class="list-group">
+            </form>
+            <form class="col-md-6 things-container bg-light" id="taskContainer">
+                <ul class="list-group" id="items">
                     <li class="list-group-item edit-item">
                         <div class="container">
                             <label class="edit" for="new">Edit:</label>
                             <input type="text" class="form-control edit">
-                            <button class="btn btn-outline-info btn-save" type="save">Save</button>
+                            <input class="btn btn-outline-info btn-save" type="submit" value="Save"></input>
                         </div>
                     </li>
-                    <li class="list-group-item">
-                        <label><input type="checkbox" class="form-check-input" value="">
-                        First item</label>
-                        <div class="fonts d-inline ">
-                            <i class="far fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <label><input type="checkbox" class="form-check-input" value="">
-                        Second item</label>
-                        <div class="fonts d-inline">
-                            <i class="far fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <label><input type="checkbox" class="form-check-input" value="">
-                        Third item</label>
-                        <div class="fonts d-inline">
-                            <i class="far fa-edit"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </li>
+                    
                 </ul>
-            </div>
+            </form>
         </div>
     </div>
+<script src="../public/javascripts/bundle.js"></script>
 </body>
 </html>
