@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include head %>
+
+<body>
+  <header class="lo-btn">
+    <button id='logout' class="btn btn-outline-info" type="logout">Logout</button>
+  </header>
+  <div class="main-container container-fluid ">
+    <div class="container-fluid">
+      <div class="col-md-6 new-thing-container bg-light">
+        <h3>New Thing:</h3>
+        <div class="container">
+          <input type="text" class="form-control new-thing">
+          <button class="btn btn-info btn-add" type="add">Add</button>
+        </div>
+      </div>
+      <div class="col-md-6 things-container bg-light">
+        <ul class="list-group">
+          <li class="list-group-item edit-item">
+            <div class="container">
+              <label class="edit" for="new">Edit:</label>
+              <input type="text" class="form-control edit">
+              <button class="btn btn-outline-info btn-save" type="save">Save</button>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <label><input type="checkbox" class="form-check-input" value="">
+              First item</label>
+            <div class="fonts d-inline ">
+              <i class="far fa-edit"></i>
+              <i class="fas fa-trash-alt"></i>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <label><input type="checkbox" class="form-check-input" value="">
+              Second item</label>
+            <div class="fonts d-inline">
+              <i class="far fa-edit"></i>
+              <i class="fas fa-trash-alt"></i>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <label><input type="checkbox" class="form-check-input" value="">
+              Third item</label>
+            <div class="fonts d-inline">
+              <i class="far fa-edit"></i>
+              <i class="fas fa-trash-alt"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="javascripts/bundle.js"></script>
+</body>
+
+</html>

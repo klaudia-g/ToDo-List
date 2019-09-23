@@ -1,7 +1,7 @@
-const createUser = function() {
+const createUser = function () {
     const form = document.getElementById('signup-form');
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
         const username = document.getElementById('signup-username');
         const name = document.getElementById('signup-name');
@@ -11,26 +11,26 @@ const createUser = function() {
             name: name.value,
             password: password.value
         };
-    
+
         fetch('/users', {
-          method: 'POST',
-          headers: {
-              'Accept':'applicaton/json, text/plain, /',
-              "Content-type":'application/json'
-          },
-          body: JSON.stringify(body)
-       })
-       .then((data)=>console.log(data))
-        .catch((err)=>console.log(err))
+                method: 'POST',
+                headers: {
+                    'Accept': 'applicaton/json, text/plain, /',
+                    "Content-type": 'application/json'
+                },
+                body: JSON.stringify(body)
+            })
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
     });
 }
 
 
 
-const logUser = function() {
+const logUser = function () {
     const form = document.getElementById('login-form');
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
         const username = document.getElementById('login-username');
         const password = document.getElementById('login-password');
@@ -38,38 +38,42 @@ const logUser = function() {
             username: username.value,
             password: password.value
         };
-    
+
         fetch('/auth', {
-          method: 'POST',
-          headers: {
-              'Accept':'applicaton/json, text/plain, /',
-              "Content-type":'application/json'
-          },
-          body: JSON.stringify(body)
-       })
-       .then((data) => console.log(data))
-        .catch((err)=>console.log(err))
+                method: 'POST',
+                headers: {
+                    'Accept': 'applicaton/json, text/plain, /',
+                    "Content-type": 'application/json'
+                },
+                body: JSON.stringify(body)
+            })
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
     });
 }
 
 
 
-const logOut = function(e) {
+const logOut = function (e) {
     const button = document.getElementById('logout');
 
-    button.addEventListener('click', function(e){
+    button.addEventListener('click', function (e) {
         e.preventDefault();
 
         fetch('/logout', {
-          method: 'DELETE'
-       })
-       .then((data) => console.log(data))
-        .catch((err)=>console.log(err))
-   
+                method: 'DELETE'
+            })
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
+
     });
 
 }
 
 
 
-export { createUser, logUser, logOut };
+export {
+    createUser,
+    logUser,
+    logOut
+};
