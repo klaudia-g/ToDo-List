@@ -16,7 +16,7 @@ It was created as second team project for the CodersCamp course.
 * Express.js
 * Node.js
 
-+ *Additional: Bootstrap, Webpack, Babel, EJS, NPM, 
++ *Additional: Bootstrap, Webpack, Babel, EJS, NPM,*
 
 ### Contributors
 * [stolarri](https://github.com/stolarri)
