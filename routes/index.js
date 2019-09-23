@@ -6,8 +6,5 @@ router.get('/', function (req, res, next) {
   res.render('login');
 });
 
-router.get('/me', function (req, res, next) {
-  res.render('main');
-});
 
 module.exports = router;
